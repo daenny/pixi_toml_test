@@ -1,0 +1,36 @@
+[package]
+name = "pixi_toml_test"
+version = "1.0.0"
+description = "TEST"
+license = "Apache-2.0"
+homepage = "https://git.smart-robotics.nl/smart-robotics/sr_installation_tools"
+repository = "https://git.smart-robotics.nl/smart-robotics/sr_installation_tools.git"
+documentation = "https://docs.smart-robotics.nl/sr_installation_tools/index.html"
+authors = ["Daniel Claes <dclaes@smart-robotics.nl>"]
+
+[package.build]
+# Note: build backends are WIP and should always be pinned for now
+backend = { name = "pixi-build-python", version = "==0.1.0dev20250116131736" }
+channels = [
+  "https://prefix.dev/pixi-build-backends",
+  "https://prefix.dev/conda-forge",
+]
+
+
+[workspace]
+channels = ["conda-forge"]
+#name = "pixi_toml_test"
+platforms = ["linux-64"]
+preview = ["pixi-build"]
+#version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+pixi_toml_test = { path = '.' }
+
+[package.host-dependencies]
+hatchling = ">=1.27.0,<2"
+python = ">=3.11,<3.14"
+
+[package.run-dependencies]

@@ -1,6 +1,6 @@
 [project]
 name = "repro_dep"
-version = "1.0.0"
+version = "5.0.0"
 description = "Dependency package used to check which git branch pixi checks out"
 
 [build-system]

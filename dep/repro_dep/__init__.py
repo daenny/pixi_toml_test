@@ -1,8 +1,8 @@
 """Marker module: reports which branch of the repo this package was built from."""
 
 # Changed on every branch, so the installed value tells you which git ref pixi used.
-BRANCH = "repro-dep-v3"
-VERSION = "3.1.0"
+BRANCH = "feature/dep-v4"
+VERSION = "4.0.0"
 
 
 def main() -> None:

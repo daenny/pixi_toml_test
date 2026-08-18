@@ -12,7 +12,7 @@ preview = ["pixi-build"]
 
 [package]
 name = "repro_dep"
-version = "3.1.0"
+version = "4.0.0"
 description = "Dependency package used to check which git branch pixi checks out"
 
 [package.build.backend]

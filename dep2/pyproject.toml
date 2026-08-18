@@ -1,0 +1,8 @@
+[project]
+name = "repro_dep_other"
+version = "4.0.0"
+description = "Second package in the same repo, used to test two branches of one repo"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]

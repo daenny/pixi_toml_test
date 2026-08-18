@@ -29,3 +29,10 @@ python = ">=3.11,<3.14"
 
 [package.run-dependencies]
 python = ">=3.11,<3.14"
+
+# Transitive git source dependency: this package itself pulls a package from
+# another branch of the same repo. Expect repro_dep_other 4.0.0 (feature/dep-v4).
+[package.run-dependencies.repro_dep_other]
+git = "https://github.com/daenny/pixi_toml_test.git"
+branch = "feature/dep-v4"
+subdirectory = "dep2"

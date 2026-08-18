@@ -1,9 +1,5 @@
-# Minimal package used as a *git source dependency* by the workspace in the
-# repository root. It exists on several branches with a DIFFERENT version and a
-# different `BRANCH` marker, so you can tell which branch pixi actually checked out.
-#
-#   branch `main`          -> version 1.0.0, BRANCH = "main"
-#   branch `repro-dep-v2`  -> version 2.0.0, BRANCH = "repro-dep-v2"
+# Second package in this repo, used to check what happens when a workspace pulls
+# two packages from the SAME git repo but from DIFFERENT branches.
 
 [workspace]
 channels = ["https://prefix.dev/conda-forge"]
@@ -13,11 +9,11 @@ preview = ["pixi-build"]
 [package]
 name = "repro_dep_other"
 version = "2.0.0"
-description = "Dependency package used to check which git branch pixi checks out"
+description = "Second package in the same repo, used to test two branches of one repo"
 
 [package.build.backend]
 name = "pixi-build-python"
-version = "2.0.0"
+version = "*"
 channels = [
   "https://prefix.dev/pixi-build-backends",
   "https://prefix.dev/conda-forge",

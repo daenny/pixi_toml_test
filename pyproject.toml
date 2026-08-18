@@ -1,5 +1,7 @@
 [project]
-dynamic = ["name", "version", "authors", "license", "dependencies"]
+name = "pixi_toml_test"
+version = "1.0.0"
+dynamic = ["dependencies"]
 keywords = ["test"]
 scripts = { test_toml = 'pixi_toml_test:main' }
 

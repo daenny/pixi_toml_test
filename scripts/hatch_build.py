@@ -37,8 +37,4 @@ class JSONMetaDataHook(MetadataHookInterface):
         """Update method triggered by hatch build."""
         with open(Path(self.root, "pixi.toml"), "rb") as manifest_file:
             manifest = toml.load(manifest_file)
-            metadata["version"] = manifest["package"]["version"]
-            metadata["name"] = manifest["package"]["name"]
-            metadata["license"] = manifest["package"]["license"]
-            metadata["authors"] = [{"name": author} for author in manifest["package"]["authors"]]
             metadata["dependencies"] = dependencies_from_pixi_dependencies(manifest["package"]["run-dependencies"])
